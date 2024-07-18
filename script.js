@@ -1,3 +1,5 @@
+//  task using the setTimeout
+ 
  // Enter ATM
 // Insert Card - 2 sec
 // Enter PIN - 3 sec
@@ -77,3 +79,41 @@ function fun3() {
 // }
 // let a=new Demo();
 // let b=new New();
+
+
+// task using promises
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+function enterATM(inserCard) {
+  console.log("Enter ATM");
+  setTimeout(inserCard,2000);
+}
+enterATM()
+function insertCard(enterPIN) {
+  console.log("Insert Card");
+  setTimeout(enterPIN, 3000);
+}
+
+function enterPIN(processing) {
+  console.log("Enter PIN");
+  setTimeout(processing, 5000); 
+}
+
+function processing(withdrawMoney) {
+  console.log("Processing");
+  setTimeout(withdrawMoney, 2000); 
+}
+
+function withdrawMoney(collectMoney) {
+  console.log("Withdraw Money");
+  setTimeout(collectMoney, 1000); 
+}
+
+function collectMoney(leaveATM) {
+  console.log("Collect Money");
+  setTimeout(leaveATM, 0);
+}
+
+function leaveATM() {
+  console.log("Leave ATM");
+}
