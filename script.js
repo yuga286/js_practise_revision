@@ -99,6 +99,16 @@
 // task using promises
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Enter ATM
+// Insert Card - 2 sec
+// Enter PIN - 3 sec
+// Processing - 5 sec
+// Withdraw Money - 2 sec
+// Collect Money - 1 sec
+// Leave ATM
+
+
 // function enterATM(callback) {
 //   console.log("Enter ATM");
 //   setTimeout(callback,2000);
@@ -145,3 +155,46 @@
 //         })
 //     })
 // })
+
+
+
+// ########################################################################################################################################
+
+// task using the promises
+
+// A promise is an Object that may produce a single value 
+// some time in the future: either a resolved value, 
+// or a reason that it’s not resolved (e.g., a network error occurred). 
+
+// A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+
+// Promise States
+// 1. Pending - initial state, neither fulfilled nor rejected.
+// 2. Fulfilled - meaning that the operation completed successfully.
+// 3. Rejected - meaning that the operation failed.
+
+// Errors -
+// 1. Syntax Error
+// 2. Runtime Error
+// 3. Logical Error
+// 4. Network Error
+
+
+// Syntax - 
+
+// Promise Constructor
+
+// Promise takes a function that is called excuter function
+
+// Promise methods
+// 1. then() - it is called when a promise is resolved
+// 2. catch() - it is called when a promise is rejected
+// 3. finally() - it is called when a promise is settled, i.e. either resolved or rejected
+
+
+// Make Tea
+// 1. Boil Water - 2 min
+// 2. Add Sugar - 1 min
+// 3. Add Tea Leaves - 1min
+// 4. Add Milk - 1min
+// 5. Serve Tea
