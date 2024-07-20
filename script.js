@@ -303,3 +303,96 @@
 // .finally(() => {
 //     console.log("Thank you for serving the tea.");
 // });
+
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// task of async/await
+
+// Make Tea
+// 1. Boil Water - 2 min
+// 2. Add Sugar - 1 min
+// 3. Add Tea Leaves - 1min
+// 4. Add Milk - 1min
+// 5. Serve Tea
+
+// function boilWater(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res(console.log("water is boiling"))
+//             }
+//             else{
+//                 rej(console.log("water is not boiled"))
+//             }
+//         },2000);
+//     })
+// }
+
+// function addSugar(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res(console.log("add sugar"))
+//             }
+//             else{
+//                 rej(console.log("sugar is not added"))
+//             }
+//         },1000);
+//     })
+// }
+
+// function addTeaLeaves(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res(console.log("add Tea leaves"))
+//             }
+//             else{
+//                 rej(console.log("Tea Leaves is not added"))
+//             }
+//         },1000);
+//     })
+// }
+
+
+// function addMilk(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res(console.log("add Milk"))
+//             }
+//             else{
+//                 rej(console.log("Milk is not added"))
+//             }
+//         },1000);
+//     })
+// }
+
+// function serveTea(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res(console.log("serve Tea"))
+//             }
+//             else{
+//                 rej(console.log("can't Serve Tea"))
+//             }
+//         },0);
+//     })
+// }
+
+// async function makeTea(){
+//     await boilWater();
+//     await addSugar();
+//     await addTeaLeaves();
+//     await addMilk();
+//     serveTea();
+// }
+
+// makeTea();
