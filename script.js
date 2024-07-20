@@ -198,3 +198,108 @@
 // 3. Add Tea Leaves - 1min
 // 4. Add Milk - 1min
 // 5. Serve Tea
+
+// Make Tea
+// 1. Boil Water - 2 min
+// 2. Add Sugar - 1 min
+// 3. Add Tea Leaves - 1min
+// 4. Add Milk - 1min
+// 5. Serve Tea
+
+// function boilWater(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res("water is boiling")
+//             }
+//             else{
+//                 rej("water is not boiled")
+//             }
+//         },2000);
+//     })
+// }
+
+// function addSugar(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res("add sugar")
+//             }
+//             else{
+//                 rej("sugar is not added")
+//             }
+//         },1000);
+//     })
+// }
+
+// function addTeaLeaves(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res("add Tea leaves")
+//             }
+//             else{
+//                 rej("Tea Leaves is not added")
+//             }
+//         },1000);
+//     })
+// }
+
+
+// function addMilk(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res("add Milk")
+//             }
+//             else{
+//                 rej("Milk is not added")
+//             }
+//         },1000);
+//     })
+// }
+
+// function serveTea(){
+//     return new Promise((res,rej)=>{
+//         let newvar=true
+//         setTimeout(()=>{
+//             if(newvar){
+//                 res("serve Tea")
+//             }
+//             else{
+//                 rej("can't Serve Tea")
+//             }
+//         },0);
+//     })
+// }
+
+// boilWater()
+// .then((res)=>{
+//     console.log(res)
+//     return addSugar();
+// })
+// .then((res)=>{
+//     console.log(res)
+//     return addTeaLeaves();
+// })
+// .then((res)=>{
+//     console.log(res)
+//     return addMilk();
+// })
+// .then((res)=>{
+//     console.log(res)
+//     return serveTea();
+// })
+// .then((res)=>{
+//     console.log(res)
+// })
+// .catch((error) => {
+//     console.error("An error occurred:", error);
+// })
+// .finally(() => {
+//     console.log("Thank you for serving the tea.");
+// });
