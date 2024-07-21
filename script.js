@@ -396,3 +396,37 @@
 // }
 
 // makeTea();
+
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// fetchAPI
+
+const button = document.getElementById("btn");
+        let image = document.getElementById("image");
+        let error = document.getElementById("error")
+        // console.log(button,"button");
+
+        button.addEventListener("click",()=>{
+            fetchData();
+        })
+
+        function fetchData(){
+           let api = "https://restful-booker.herokuapp.com/apidoc/index.html";
+
+           fetch(api)
+              .then((response)=>{
+                    console.log(response,"response");
+                    // return response.json()
+                    console.log(response.json());
+                
+              })
+            //   .then((data)=>{
+            //     console.log(data.url,"data");
+            //     image.src = data.url;
+            //   })
+              .catch((error)=>{
+                error.innerHtml = error.message;
+              })
+
+    
+        }
