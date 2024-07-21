@@ -401,32 +401,170 @@
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // fetchAPI
 
-const button = document.getElementById("btn");
-        let image = document.getElementById("image");
-        let error = document.getElementById("error")
-        // console.log(button,"button");
+// const button = document.getElementById("btn");
+//         let image = document.getElementById("image");
+//         let error = document.getElementById("error")
+//         // console.log(button,"button");
 
-        button.addEventListener("click",()=>{
-            fetchData();
-        })
+//         button.addEventListener("click",()=>{
+//             fetchData();
+//         })
 
-        function fetchData(){
-           let api = "https://restful-booker.herokuapp.com/apidoc/index.html";
+//         function fetchData(){
+//            let api = "https://restful-booker.herokuapp.com/apidoc/index.html";
 
-           fetch(api)
-              .then((response)=>{
-                    console.log(response,"response");
-                    // return response.json()
-                    console.log(response.json());
+//            fetch(api)
+//               .then((response)=>{
+//                     console.log(response,"response");
+//                     // return response.json()
+//                     console.log(response.json());
                 
-              })
-            //   .then((data)=>{
-            //     console.log(data.url,"data");
-            //     image.src = data.url;
-            //   })
-              .catch((error)=>{
-                error.innerHtml = error.message;
-              })
+//               })
+//             //   .then((data)=>{
+//             //     console.log(data.url,"data");
+//             //     image.src = data.url;
+//             //   })
+//               .catch((error)=>{
+//                 error.innerHtml = error.message;
+//               })
 
     
-        }
+//         }
+
+
+// Preparing for a Birthday Party
+
+// Design Costumes: Takes 2 hours.
+// Prepare Treasure Maps: Takes 3 hours.
+// Bake Dora Cake: Takes 2 hours.
+// Set Up Doraemon Decorations: Takes 2 hours, and this should be done after preparing the treasure maps.
+// Arrange Doraemon-Themed Music: Takes 1 hour.
+// Prepare Doraemon Lunch: Takes 1 hour, and this should be done after baking the Dora cake.
+// Send Invitations to the Friends (Giyan, Suneo, Dekisigi, Shizuka) : Takes 1 hour, but this must be done after designing the costumes.
+// Organize Doraemon Games: Takes 1.5 hours, and this should be done after arranging the music.
+
+function costumes() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Design Constumers"))
+      }
+      else{
+        rej(console.log("Design not constumers"))
+      }
+    },2000)
+  })
+}
+
+
+function treasureMaps() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Treasure Maps are ready"))
+      }
+      else{
+        rej(console.log("Treasure Maps are not ready"))
+      }
+    },3000)
+  })
+}
+
+function bakeDoraCake() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Dora Cakes are ready"))
+      }
+      else{
+        rej(console.log("Dora Cake is not ready"))
+      }
+    },2000)
+  })
+}
+
+function Decorations() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Decorations are ready"))
+      }
+      else{
+        rej(console.log("Decorations are not ready"))
+      }
+    },2000)
+  })
+}
+
+function DoraemonThemedMusic() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Deraemon Themed Music is ready"))
+      }
+      else{
+        rej(console.log("Deraemon Themed Music is not ready"))
+      }
+    },1000)
+  })
+}
+
+function lunch() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Lunch is ready"))
+      }
+      else{
+        rej(console.log("Lunch is not ready"))
+      }
+    },1000)
+  })
+}
+
+function invitations() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Invitation is ready"))
+      }
+      else{
+        rej(console.log("Invitation is not get sended"))
+      }
+    },1000)
+  })
+}
+
+function games() {
+  return new Promise((res,rej)=>{
+    let cos=true;
+    setTimeout(()=>{
+      if(cos){
+        res(console.log("Games is ready"))
+      }
+      else{
+        rej(console.log("Games is not ready"))
+      }
+    },1500)
+  })
+}
+
+async function party(){
+  await costumes();
+  await invitations();
+  await treasureMaps();
+  await Decorations();
+  await bakeDoraCake();
+  await lunch();
+  await DoraemonThemedMusic();
+  games();
+}
+
+party()
